@@ -44,7 +44,7 @@ while len(guessed_countries) < 50:
         df = pandas.DataFrame(con_dict)
         df.to_csv("countries_to_learn.csv")
         break
-    if answer in all_countries:
+    if answer in all_countries and answer not in guessed_countries:
         guessed_countries.append(answer)
         name_t = turtle.Turtle()
         name_t.hideturtle()
